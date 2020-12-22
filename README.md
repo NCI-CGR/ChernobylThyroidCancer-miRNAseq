@@ -6,3 +6,12 @@ Major steps in the workflow are:
 2) Generating QC reports using FASTQC and aggregating results using multiQC
 3) Aligning trimmed reads to GRCh38 human reference genome (illumine iGenomes NCBI GRCh38) using STAR, and microRNA reads count was quantified according to GENCODE V24 genome annotation file which was the microRNA subset from comprehensive GENCODE annotations.
 4) Merging reads-count tables of all samples
+## II. Dependencies
+1) Python
+2) Snakemake
+3) Cutadapt
+4) Fastqc
+5) Multiqc
+6) Star
+7) R
+## III. Input requirements
