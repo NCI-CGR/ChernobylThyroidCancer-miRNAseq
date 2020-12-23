@@ -69,8 +69,9 @@ rule star_index:
 
 rule star_align:
         input:
-           "star_index/complete.txt",
+           "star_index/ENCFF628BVT.gtf",
            "trimmed/{sample}.trim.fastq.gz"
+           "star_index/complete.txt"
         output:
            "star_align/{sample}/{sample}Aligned.sortedByCoord.out.bam",
            "star_align/{sample}/{sample}Log.final.out",
@@ -97,7 +98,6 @@ rule multiqc:
           """
           multiqc pretrim_qc/. --title preQC -o pretrim_qc 2>log/multiqc_preqc.err
           multiqc posttrim_qc/. --title postQC -o posttrim_qc/ 2>log/multiqc_postqc.err
-          rm -r star_align/log
           mkdir star_align/log
           cp star_align/*/*Log.final.out star_align/log
           multiqc star_align/log/. --title star_align -o star_align/log 2>log/multiqc_star.err
