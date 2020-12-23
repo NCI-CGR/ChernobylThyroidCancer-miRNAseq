@@ -20,5 +20,5 @@ Major steps in the workflow are:
 2) sample_names.txt
 3) merged fastq files stored in directory: merged_fastq/
 4) adapters.fa with adapter sequences
-5) reference genome sequence and annotation file
+5) reference genome sequence and annotation files
 6) microRNA annotation file
