@@ -10,10 +10,10 @@ Major steps in the workflow are:
 ## II. Dependencies
 1) [Python](https://www.python.org)
 2) [Snakemake](https://snakemake.readthedocs.io/en/stable/)
-3) Cutadapt
-4) Fastqc
+3) [Cutadapt](https://cutadapt.readthedocs.io/en/stable/)
+4) [Fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 5) [Multiqc](https://multiqc.info)
-6) Star
+6) [Star](https://github.com/alexdobin/STAR)
 7) [R](https://www.r-project.org)
 ## III. Input requirements
 1) config.yaml
