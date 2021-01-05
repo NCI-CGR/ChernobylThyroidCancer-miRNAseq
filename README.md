@@ -16,9 +16,9 @@ Major steps in the workflow are:
 * [Star](https://github.com/alexdobin/STAR)
 * [R](https://www.r-project.org)
 ## III. Input requirements
-* config.yaml
-* sample_names.txt
-* merged fastq files stored in directory: merged_fastq/
-* adapters.fa with adapter sequences
+* [config.yaml](https://github.com/NCI-CGR/ChernobylThyroidCancer-miRNAseq/blob/main/config.yaml)
+* [sample_names.txt](https://github.com/NCI-CGR/ChernobylThyroidCancer-miRNAseq/blob/main/sample_names.txt)
+* [merged fastq files stored in directory: merged_fastq/](https://github.com/NCI-CGR/ChernobylThyroidCancer-miRNAseq/tree/main/merged_fastq)
+* [adapters.fa with adapter sequences](https://github.com/NCI-CGR/ChernobylThyroidCancer-miRNAseq/blob/main/adapters.fa)
 * reference genome sequence and annotation files
-* microRNA annotation file
+* [microRNA annotation file](https://github.com/NCI-CGR/ChernobylThyroidCancer-miRNAseq/tree/main/star_index)
