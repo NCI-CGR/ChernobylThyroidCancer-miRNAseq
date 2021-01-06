@@ -10,26 +10,27 @@ configfile:"config.yaml"
 localrules: all
 
 rule all:
-   input:
-         expand("star_align/{sample}/{sample}Aligned.sortedByCoord.out.bam",sample=config["samples"]),
-         "pretrim_qc/preQC_multiqc_report.html",
-         "posttrim_qc/postQC_multiqc_report.html",
-         "star_align/log/star_align_multiqc_report.html",
-         "reads_count/reads_count.csv"         
+    input:
+          expand("star_align/{sample}/{sample}Aligned.sortedByCoord.out.bam",sample=config["samples"]),
+          "pretrim_qc/preQC_multiqc_report.html",
+          "posttrim_qc/postQC_multiqc_report.html",
+          "star_align/log/star_align_multiqc_report.html",
+          "reads_count/reads_count.csv"         
 
 rule cutadapt:
-   input: 
-      "merged_fastq/{sample}.fastq.gz"
-   output:
-          "trimmed/{sample}.trim.fastq.gz",
-          "trimmed/{sample}_too_short.fastq.gz",
-          "trimmed/{sample}_too_long.fastq.gz"
-   params: adapter = config["ADAPTER_FA"]
-   threads: 10
-   shell:
-        """
-        cutadapt -b {params.adapter} -m 15 -M 31 --too-short-output={output[1]} --too-long-output={output[2]} -q 10,10 -o {output[0]} {input} 2>log/{wildcards.sample}_cutadapt.err
-        """
+    input: 
+          "merged_fastq/{sample}.fastq.gz"
+    output:
+           "trimmed/{sample}.trim.fastq.gz",
+           "trimmed/{sample}_too_short.fastq.gz",
+           "trimmed/{sample}_too_long.fastq.gz"
+    params: 
+           adapter = config["ADAPTER_FA"]
+    threads: 10
+    shell:
+          """
+          cutadapt -b {params.adapter} -m 15 -M 31 --too-short-output={output[1]} --too-long-output={output[2]} -q 10,10 -o {output[0]} {input} 2>log/{wildcards.sample}_cutadapt.err
+          """
 
 rule pretrim_qc:
     input: "merged_fastq/{sample}.fastq.gz" 
