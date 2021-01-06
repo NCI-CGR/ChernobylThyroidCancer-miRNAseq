@@ -1,6 +1,6 @@
 # Chernobyl Thyroid Cancer - miRNAseq
 ## I. Description
-This workflow was used for general QC and alignment of microRNA-seq data in the Chernbobyl thyroid cancer study. The sequenced reads were processed according to the ENCODE microRNA-seq pipeline (https://www.encodeproject.org/microrna/microrna-seq/#references). 
+This workflow was used for general QC and alignment of microRNA-seq data in the Chernbobyl thyroid cancer study. The sequencing reads were processed according to the ENCODE microRNA-seq pipeline (https://www.encodeproject.org/microrna/microrna-seq/#references). 
 
 Major steps in the workflow are:
 1) Trimming of adapters and low-quality reads using cutadapt and only reads with lengths of 15-31 nt were kept
