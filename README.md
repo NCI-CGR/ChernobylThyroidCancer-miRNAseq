@@ -28,6 +28,7 @@ Major steps in the workflow are:
 ├── adapters.fa
 ├── config.yaml
 ├── log
+│   └── log files
 ├── merged_fastq
 │   └── {sample}.fastq.gz
 ├── merge.R
@@ -47,29 +48,17 @@ Major steps in the workflow are:
 ├── snakemake.batch
 ├── star_align
 │   ├── log
+│   │   ├── {sample}Log.final.out
 │   │   └── star_align_multiqc_report.html
 │   └── {sample}
 │       ├── {sample}Aligned.sortedByCoord.out.bam
 │       ├── {sample}Log.final.out
-│       └── {sample}ReadsPerGene.out.tab
+│       ├── {sample}ReadsPerGene.out.tab
+│       └── other star output files
 ├── star_index
-│   ├── chrLength.txt
-│   ├── chrNameLength.txt
-│   ├── chrName.txt
-│   ├── chrStart.txt
 │   ├── ENCFF628BVT.gtf
-│   ├── exonGeTrInfo.tab
-│   ├── exonInfo.tab
 │   ├── gencode.v24.primary_assembly.annotation-tRNAs-ERCC_phiX.gtf
-│   ├── geneInfo.tab
-│   ├── Genome
-│   ├── genomeParameters.txt
-│   ├── SA
-│   ├── SAindex
-│   ├── sjdbInfo.txt
-│   ├── sjdbList.fromGTF.out.tab
-│   ├── sjdbList.out.tab
-│   └── transcriptInfo.tab
+│   └── other index files
 └── trimmed
     ├── {sample}_too_long.fastq.gz
     ├── {sample}_too_short.fastq.gz
