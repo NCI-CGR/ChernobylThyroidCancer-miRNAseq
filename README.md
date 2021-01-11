@@ -22,7 +22,14 @@ Major steps in the workflow are:
 * [adapters.fa with adapter sequences](https://github.com/NCI-CGR/ChernobylThyroidCancer-miRNAseq/blob/main/adapters.fa)
 * reference genome sequence and annotation files
 * [microRNA annotation file](https://github.com/NCI-CGR/ChernobylThyroidCancer-miRNAseq/tree/main/star_index)
-## IV. Working directory structure
+## IV. Output
+* Trimmed reads in directory: trimmed/
+* QC reports of pre-trimmed reads in direcotry: pretrim_qc/
+* QC reports of post-trimmed reads in direcotry: posttrim_qc/
+* STAR index in directory: star_index/
+* STAR alignent results and statistics reports in directory : star_align/
+* merged reads count table: reads_count/reads_count.csv
+## V. Working directory structure
 ```bash
 .
 ├── adapters.fa
