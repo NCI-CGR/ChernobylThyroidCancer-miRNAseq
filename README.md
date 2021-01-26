@@ -8,7 +8,6 @@ Major steps in the workflow are:
 3) Aligning trimmed reads to GRCh38 human reference genome (illumine iGenomes NCBI GRCh38) using STAR, and microRNA reads count was quantified according to GENCODE V24 genome annotation file which was the microRNA subset from comprehensive GENCODE annotations.
 4) Merging reads-count tables of all samples
 ## II. Dependencies
-* [Python](https://www.python.org)
 * [Snakemake](https://snakemake.readthedocs.io/en/stable/)
 * [Cutadapt](https://cutadapt.readthedocs.io/en/stable/)
 * [Fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
